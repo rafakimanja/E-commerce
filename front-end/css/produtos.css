@@ -76,3 +76,12 @@ body{
     color: white;
 }
 
+@media screen and (min-width: 1600px){
+    .slider {
+        width: 800px;
+    }
+
+    .camisas-slider img{
+        width: 800px;
+    }    
+}
