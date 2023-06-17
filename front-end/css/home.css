@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+
+/*----------PRODUTOS-------------*/
+.camisas{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.camisa{
+    font-family: 'Bubblegum Sans', cursive;
+    text-align: center;
+    font-size:larger;
+    font-weight: 50;
+    background-color: white;
+    float: left;
+    margin-top: 7rem;
+    margin-right: 10px;
+    border: 10px;
+    padding: 15px;
+    padding-bottom: 1px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, .212);
+}
+
+#camisa2{
+    margin-left: 175px;
+
+}
+
+img{
+    
+    width: 500px;
+}
+
+a.link_camisas:link, a.link_camisas:visited{
+    text-decoration: none;
+}
+
+/*---------------------------------------*/
+
+body{
+    margin: 0;
+    padding: 0;
+    margin: 0 auto;   
+}
+
+a:visited{
+    color: black;
+    text-decoration: none;
+}
+
+a:link{
+    color: black;
+}
