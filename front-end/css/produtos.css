@@ -11,15 +11,28 @@ body{
 .container{
     display: flex;
     align-self: center;
-    margin-top: 10rem;
+    justify-content: center;
+    margin-top: 2.5rem;
     padding: 2rem 3rem 3rem 1rem;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, .212);
-    
 }
 
-.camisas img{
+.slider {
     width: 500px;
-    margin-right: 50px;
+    overflow: hidden;
+}
+
+.camisas-slider {
+    display: flex;
+    width: 100%;
+}
+
+.camisas-slider img{
+    width: 500px;
+}
+
+.camisas-slider input {
+    display: none;
 }
 
 .tamanhos{
