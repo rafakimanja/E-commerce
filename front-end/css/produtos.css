@@ -12,8 +12,8 @@ body{
     display: flex;
     align-self: center;
     justify-content: center;
-    margin-top: 2.5rem;
-    padding: 2rem 3rem 3rem 1rem;
+    margin-top: 10.5rem;
+    padding: 2rem 3rem 3rem 0rem;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, .212);
 }
 
@@ -34,6 +34,62 @@ body{
 .camisas-slider input {
     display: none;
 }
+
+.slide-box{
+    /* width: 25%; */
+    height: auto;
+    position: relative;
+    text-align: center;
+    transition: 2s;
+}
+
+.slide-box img{
+    width: 100%;
+}
+
+/* --------------botões-------------- */
+
+.nav-manual, .nav-auto{
+    width: 25%;
+    margin-top: 26%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-manual .manual-btn, .nav-auto div{
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child){
+    margin-right: 10px;
+}
+
+.nav-manual .manual-btn:hover{
+    background-color: black;
+}
+
+#radio1:checked ~ .nav-auto .auto-btn1, #radio2:checked ~ .nav-auto .auto-btn2, #radio3:checked ~ .nav-auto .auto-btn3{
+    background-color: black;
+}
+
+#radio1:checked ~ .primeiro{
+    margin-left: 0%;
+}
+
+#radio2:checked ~ .primeiro{
+    margin-left: -100%;
+}
+
+#radio3:checked ~ .primeiro{
+    margin-left: -200%;
+}
+
+/* ---------------------------------- */
 
 .tamanhos{
     padding-bottom: 0.2rem;
@@ -78,10 +134,11 @@ body{
 
 @media screen and (min-width: 1600px){
     .slider {
-        width: 800px;
+        width: 600px;
     }
 
     .camisas-slider img{
-        width: 800px;
-    }    
+        width: 600px;
+    }
+ 
 }

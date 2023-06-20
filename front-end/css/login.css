@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;   
+}
+
+.alinhamento{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.form{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 40px;
+    background-color: rgb(207, 207, 207);
+    padding: 3rem;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, .212);
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.input-box input {
+    margin: 1rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+}
+
+.input-box input:hover{
+    background-color: #eeeeeef5;
+}
+
+
+.input-box label{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #000000c0;
+    margin-bottom: 1%;
+}
+
+.input-box input::placeholder{
+    color: #000000be;
+}
+
+.botao-logar button{
+    width: 100%;
+    margin: 0.5rem 2rem;
+    display: flex;
+    justify-content: center;
+    border: 0.1rem;
+    border-style: solid;
+    border-color: black;
+    background-color: white;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+

@@ -12,15 +12,41 @@
     <div class="cabeçalho">
         <img id="bola" src="../img/bola-sem-fundo.svg" alt="">
         <h2>LOJA DOS GURI</h2>
+        <a href="../html/home.html"><img id="home" src="../img/Icon_home.svg" alt=""></a>
         <a href="#" class="login">Entrar</a>
-        <a href="../html/home.html" class="home">Home</a>
     </div>
 
     <div class="container">
-        <div class="camisas">
-            <!-- <img id="camisa1" src="../img/camisa2_city.webp" alt="">
-            <img id="camisa1_debruyne" src="../img/camisa2_city_verso.webp" alt=""> -->
-            <img id="camisa2_haaland" src="../img/camisa2_haaland.webp" alt="">
+        <div class="slider">
+            <div class="camisas-slider">
+                <input type="radio" name="btn-radio" id="radio1">
+                <input type="radio" name="btn-radio" id="radio2">
+                <input type="radio" name="btn-radio" id="radio3">
+
+                <div class="slide-box primeiro">
+                    <img id="camisa2" src="../img/camisa2_city.webp" alt="">
+                </div>
+
+                <div class="slide-box">
+                    <img id="camisa2_verso" src="../img/camisa2_city_verso.webp" alt="">
+                </div>
+
+                <div class="slide-box">
+                    <img id="camisa2_haaland" src="../img/camisa2_haaland.webp" alt="">
+                </div>
+
+                <div class="nav-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                </div>
+
+                <div class="nav-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                </div>
+            </div>
         </div>
 
         <div class="info-camisas">
@@ -52,5 +78,6 @@
             </div>
         </div>
     </div>
+    <script src="../Js/slider.js"></script>
 </body>
 </html>
