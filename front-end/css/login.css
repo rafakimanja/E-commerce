@@ -57,11 +57,14 @@ body{
     color: #000000be;
 }
 
-.botao-logar button{
-    width: 100%;
+.botao-logar {
+    background-color: red;
+    /* display: flex; */
+}
+
+.botao-logar {
+    width: 30%;
     margin: 0.5rem 2rem;
-    display: flex;
-    justify-content: center;
     border: 0.1rem;
     border-style: solid;
     border-color: black;
