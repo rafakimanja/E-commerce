@@ -1,4 +1,4 @@
-document.getElementById("botao-cadastrar").addEventListener("click", cadastraUsuario);
+document.getElementById("botao-cadastrar").addEventListener("click", cadastraUsuario)
 
 function cadastraUsuario(){
     let senha = document.getElementById("senha").value
@@ -12,14 +12,22 @@ function cadastraUsuario(){
         let users = localStorage.getItem("users")
         let usersArr = JSON.parse(users)
 
+        let isValidUsername = false
+
         if (usersArr == null) {
             usersArr = []
+            isValidUsername = true
         }
 
-        usersArr.push(novoUser)
-        localStorage.setItem("users", JSON.stringify(usersArr))
+        usersArr.forEach(user => user.usuario == novoUser.usuario ? isValidUsername = false : isValidUsername = true)
 
-        alert("Novo usuário cadastrado!")
+        if (isValidUsername) {
+            usersArr.push(novoUser)
+            localStorage.setItem("users", JSON.stringify(usersArr))
+            alert("Novo usuário cadastrado!")
+        } else {
+            alert('Nome de usuário já existente!')
+        }
     } else{
         alert("Senhas não batem!")
     }
