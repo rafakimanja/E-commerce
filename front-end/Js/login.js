@@ -10,11 +10,16 @@ function verificaLogin(){
         for (let i=0; i<userCadastrados.length; i++) {
             if (usuario == userCadastrados[i].usuario && senha == userCadastrados[i].senha) {
                 alert("Login realizado")
-            } else {
+                break
+            } else if((usuario != userCadastrados[i] && senha == userCadastrados[i].senha) || (usuario == userCadastrados[i].usuario && senha != userCadastrados[i].senha)) {
                 alert("Dados incorretos")
+                break
+            } else if(usuario != userCadastrados[i].usuario && senha != userCadastrados[i].senha){
+                alert("Usuario não cadastrado")
+                break
             }
         }
     } else {
-        alert("Dados incorretos")
+        alert("Usuario não cadastrado")
     }
 }

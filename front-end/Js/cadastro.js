@@ -19,9 +19,9 @@ function cadastraUsuario(){
         usersArr.push(novoUser)
         localStorage.setItem("users", JSON.stringify(usersArr))
 
-        alert("Novo usuário cadastrado: "+"\nNick: "+novoUser.usuario+"\nSenha: "+novoUser.senha)
+        alert("Novo usuário cadastrado!")
     } else{
-        alert("Senhas não batem")
+        alert("Senhas não batem!")
     }
 }
 
