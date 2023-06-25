@@ -12,16 +12,15 @@ function cadastraUsuario(){
         let users = localStorage.getItem("users")
         let usersArr = JSON.parse(users)
 
-        let isValidUsername = false
-
         if (usersArr == null) {
             usersArr = []
-            isValidUsername = true
         }
 
-        usersArr.forEach(user => user.usuario == novoUser.usuario ? isValidUsername = false : isValidUsername = true)
+        const usersCadastrados = usersArr.reduce((users, { usuario }) => {
+            return users = [...users, usuario]
+        }, [])
 
-        if (isValidUsername) {
+        if (!usersCadastrados.includes(novoUser.usuario)) {
             usersArr.push(novoUser)
             localStorage.setItem("users", JSON.stringify(usersArr))
             alert("Novo usuário cadastrado!")

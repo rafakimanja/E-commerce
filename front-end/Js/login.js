@@ -6,20 +6,25 @@ function verificaLogin(){
     let usuario = document.getElementById("nomeUsuario").value
     let senha = document.getElementById("senha").value
 
+    let isValidLogin = false
+
     if (userCadastrados != null) {
-        for (let i=0; i<userCadastrados.length; i++) {
-            if (usuario == userCadastrados[i].usuario && senha == userCadastrados[i].senha) {
-                alert("Login realizado")
-                break
-            } else if((usuario != userCadastrados[i] && senha == userCadastrados[i].senha) || (usuario == userCadastrados[i].usuario && senha != userCadastrados[i].senha)) {
-                alert("Dados incorretos")
-                break
-            } else if(usuario != userCadastrados[i].usuario && senha != userCadastrados[i].senha){
-                alert("Usuario não cadastrado")
-                break
+        userCadastrados.forEach(user => {
+            if (user.usuario == usuario && user.senha == senha) {
+                isValidLogin = true
             }
+        })
+
+        const usersCadastrados = userCadastrados.reduce((users, { usuario }) => {
+            return users = [...users, usuario]
+        }, [])
+
+        if (isValidLogin) {
+            alert("Login realizado")
+        } else if (!isValidLogin && !usersCadastrados.includes(usuario)) {
+            alert("Usuario não cadastrado")
+        } else {
+            alert("Dados incorretos")
         }
-    } else {
-        alert("Usuario não cadastrado")
     }
 }
